@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: empereur-predication-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_CLIENT_ID
+        sync: false
+      - key: DISCORD_GUILD_ID
+        sync: false
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
